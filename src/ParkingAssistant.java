@@ -51,7 +51,7 @@ public class ParkingAssistant {
         ParkingLot parkingLot = new ParkingLot();
 
         while (true) {
-            System.out.print("Type 'Next on line' to print the next person, 'Check spot' to see if a spot is vacant, or 'Exit' to exit: ");
+            System.out.print("Type 'Next on line' to print the next person, 'Check spot' to see if a spot is vacant, 'Print Queue' to print the queue, or 'Exit' to exit: ");
             String userInput = scanner.nextLine();
 
             if (userInput.equalsIgnoreCase("Next on line")) {
@@ -83,6 +83,13 @@ public class ParkingAssistant {
                 } else {
                     System.out.println("Invalid spot ID. Please enter a valid spot ID.");
                 }
+            } else if (userInput.equalsIgnoreCase("Print Queue")) {
+                // Print the queue, get the person's name and prnt it on single line
+                System.out.println("Printing the queue...");
+                for (Person person : queue) {
+                    System.out.print(person.name + ", ");
+                }
+                System.out.println();
             } else if (userInput.equalsIgnoreCase("Exit")) {
                 System.out.println("Exiting the program.");
                 break;
