@@ -1,3 +1,4 @@
+package Parking;
 public class Person {
     int id;
     int rank;
